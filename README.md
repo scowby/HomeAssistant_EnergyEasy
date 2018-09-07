@@ -1,6 +1,6 @@
-﻿# ha-jemenaoutlook
+﻿# homeassistant_energyeasy
 
-This is a [Home Assistant](https://home-assistant.io) sensor component to retrieve information from the [Jemena Electricity Outlook](https://electricityoutlook.jemena.com.au/) website, they are an electricity distributor within Victoria, Australia.
+This is a [Home Assistant](https://home-assistant.io) sensor component to retrieve information from the [Energy Easy](https://energyeasy.ue.com.au/) website, they are an electricity distributor within Victoria, Australia.
 
 This component will retrieve your electricity usage details from their website, and only cover a limited area around the northern and north western suburbs of Melbourne, Victoria.
 
@@ -19,11 +19,11 @@ This component is not endorsed by Jemena, nor have a I asked for their endorseme
 Copy the included file 'jemenaoutlook.py' to the sensor directory within custom_components directory where the configuration for your installation of home assistant sits. The custom_components directory does not exist in default installation state will will need to be created if it does not already exist.
 
 ```
-<homeassistant-user-configuration-directory>/custom_components/sensor/jemenaoutlook.py
+<homeassistant-user-configuration-directory>/custom_components/sensor/energyeasy.py
 ```
 For me this is :-
 ```
-/home/ha/.homeassistant/custom_components/sensor/jemenaoutlook.py
+/home/ha/.homeassistant/custom_components/sensor/energyeasy.py
 ```
 
 ## Configuring the sensor
@@ -32,7 +32,7 @@ For me this is :-
 # Example configuration.yaml entry
 
 sensor:
-  - platform: jemenaoutlook
+  - platform: energyeasy
     username: MYUSERNAME
     password: MYPASSWORD
     monitored_variables:
@@ -40,7 +40,6 @@ sensor:
       - weekday_peak_cost
       - weekday_offpeak_cost
       - weekday_shoulder_cost
-      - controlled_load_cost
       - weekend_offpeak_cost
       - single_rate_cost
       - generation_cost
@@ -50,7 +49,6 @@ sensor:
       - yesterday_consumption_peak
       - yesterday_consumption_offpeak
       - yesterday_consumption_shoulder
-      - yesterday_consumption_controlled_load
       - yesterday_generation
       - yesterday_cost_total
       - yesterday_cost_consumption
@@ -70,7 +68,6 @@ sensor:
       - this_week_consumption_peak
       - this_week_consumption_offpeak
       - this_week_consumption_shoulder
-      - this_week_consumption_controlled_load
       - this_week_generation
       - this_week_cost_total
       - this_week_cost_consumption
@@ -90,7 +87,6 @@ sensor:
       - this_month_consumption_peak
       - this_month_consumption_offpeak
       - this_month_consumption_shoulder
-      - this_month_consumption_controlled_load
       - this_month_generation
       - this_month_cost_total
       - this_month_cost_consumption
@@ -115,7 +111,6 @@ sensor:
     - **weekday_peak_cost** (AUD): **\*\*\*** Cost per kilowatt hour for peak usage
     - **weekday_offpeak_cost** (AUD): **\*\*\*** Cost per kilowatt hour for offpeak usage
     - **weekday_shoulder_cost** (AUD): **\*\*\*** Cost per kilowatt hour for shoulder usage
-    - **controlled_load_cost** (AUD): **\*\*\*** Cost per kilowatt hour for controlled load usage
     - **weekend_offpeak_cost** (AUD): **\*\*\*** Cost per kilowatt hour for weekend offpeak usage
     - **single_rate_cost** (AUD): **\*\*\*** Cost per kilowatt hour for single rate usage
     - **generation_cost** (AUD): **\*\*\*** Amount paid per kilowatt hour feed into the grid
@@ -125,7 +120,6 @@ sensor:
     - **yesterday_consumption_peak** (kwh): Total peak consumption for yesterday
     - **yesterday_consumption_offpeak** (kwh): Total offpeak consumption for yesterday
     - **yesterday_consumption_shoulder** (kwh): Total shoulder consumption for yesterday
-    - **yesterday_consumption_controlled_load** (kwh): Total controlled load consumption for yesterday
     - **yesterday_generation** (kwh): total of generated electricity feed into the grid for yesterday
     - **yesterday_cost_total** (AUD): **\*\*\*** Total cost of new consumption for yesterday (concumption - generation) (does not include daily supply)
     - **yesterday_cost_consumption** (AUD): **\*\*\*** Total cost of consumption for yesterday (does not include daily supply)
@@ -145,7 +139,6 @@ sensor:
     - this_week_consumption_peak
     - this_week_consumption_offpeak
     - this_week_consumption_shoulder
-    - this_week_consumption_controlled_load
     - this_week_generation
     - this_week_cost_total
     - this_week_cost_consumption
@@ -165,7 +158,6 @@ sensor:
     - this_month_consumption_peak
     - this_month_consumption_offpeak
     - this_month_consumption_shoulder
-    - this_month_consumption_controlled_load
     - this_month_generation
     - this_month_cost_total
     - this_month_cost_consumption
