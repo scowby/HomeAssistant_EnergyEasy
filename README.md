@@ -4,15 +4,13 @@ This is a [Home Assistant](https://home-assistant.io) sensor component to retrie
 
 This component will retrieve your electricity usage details from their website, and only cover a limited area around the northern and north western suburbs of Melbourne, Victoria.
 
-To use this component you will need to register for an account via the Electricity Outlook website.
-
-If Jemena are not your electricity distributor then this will be of no use to you.
+If United Energy is not your electricity distributor then this will be of no use to you.
 
 The component will only retrieve Yesterdays usage, which will also retrieve the previous days if you wish do do some other comparisions. It could easily be extended to retrieve weekly, monthly or seasonal figures as well. (I haven't got that far yet)
 
-The component is based on an older version of the [Hydro-Québec](https://home-assistant.io/components/sensor.hydroquebec/) energy sensor which is part fo the standard Home Assistant components. Thank you to the writer of that component it helpd a lot.
+The component is based on an older version of the [mvandersteen/ha-jemenaoutlook](https://github.com/mvandersteen/ha-jemenaoutlook) energy sensor. Thank you to the writer of that component it helpd a lot.
 
-This component is not endorsed by Jemena, nor have a I asked for their endorsement.
+This component is not endorsed by United Energy, nor have a I asked for their endorsement.
 
 ## Installing the component
 
