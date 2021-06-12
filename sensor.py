@@ -279,7 +279,7 @@ class EnergyEasyClient(object):
 
 
     def _post_login_page(self, login_url):
-        """Login to Jemena Electricity Outlook website."""
+        """Login to Energy Easy website."""
         form_data = {"login_email": self.username,
                 "login_password": self.password,
                 "submit": "Sign In"}
