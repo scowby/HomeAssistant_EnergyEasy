@@ -1,5 +1,7 @@
 ﻿# homeassistant_energyeasy
 
+NOTE: This no longer works. Energy Easy is no longer used by United Energy and this method no longer works.
+
 This is a [Home Assistant](https://home-assistant.io) sensor component to retrieve information from the [Energy Easy](https://energyeasy.ue.com.au/) website, they are an electricity distributor within Victoria, Australia.
 
 This component will retrieve your electricity usage details from their website, and only cover a limited area around the northern and north western suburbs of Melbourne, Victoria.
